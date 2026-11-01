@@ -8,6 +8,7 @@ import Dashbord from './Components/Dashbord/Dashbord'
 import Root from './Components/Root/Root'
 import Users from './Components/Users/Users'
 import Files from './Components/Files/Files'
+import ContextProvider from './Components/Context/Context'
 
 
 const router=createBrowserRouter([
@@ -46,6 +47,8 @@ const router=createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+  <ContextProvider>
+      <RouterProvider router={router}></RouterProvider>
+  </ContextProvider>
   </StrictMode>,
 )
